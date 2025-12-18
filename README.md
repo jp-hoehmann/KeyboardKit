@@ -2,10 +2,6 @@
 
 KeyboardKit lets you create amazing [custom keyboard extensions][About] with a few lines of code, using Swift & SwiftUI.
 
-<p align="center">
-    <img src ="Resources/Demo.gif" width=450 />
-</p>
-
 KeyboardKit extends Apple's limited keyboard APIs with more capabilities. It can be extended with [KeyboardKit Pro][Pro], which unlocks localized keyboards, autocomplete, an emoji keyboard, AI support, themes, and much more.
 
 
