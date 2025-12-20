@@ -87,7 +87,7 @@ class KeyboardViewController: KeyboardInputViewController {
 }
 ```
 
-To set up your main app with the same keyboard configuration, just wrap the content view in a `KeyboardAppView`:
+To set up your main app with the same keyboard configuration, wrap the content view in a `KeyboardAppView`:
 
 ```swift
 @main
