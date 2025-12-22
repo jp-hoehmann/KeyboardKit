@@ -163,11 +163,6 @@ The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPr
 > The demo isn't code signed and can therefore not use an App Group to sync settings between the app and its keyboards.
 > As such, the `KeyboardPro` keyboard has keyboard settings in the keyboard as well.
 
-## KeyboardKit App
-
-Download the [KeyboardKit app][KeyboardKit-App] from the App Store to try KeyboardKit without having to write any code
-or build the demo app from Xcode.
-
 ## Support This Project
 
 KeyboardKit is open-source and completely free, but you can support the project by becoming a
