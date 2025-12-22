@@ -169,15 +169,6 @@ KeyboardKit is open-source and completely free, but you can support the project 
 [GitHub Sponsor][Sponsors], upgrading to [KeyboardKit Pro][Pro] or [get in touch][Email] for freelance work, paid
 support, etc.
 
-## Contact
-
-Feel free to reach out if you have questions or if you want to contribute in any way:
-
-* Website: [keyboardkit.com][Website]
-* E-mail: [info@keyboardkit.com][Email]
-* Bluesky: [@keyboardkit.bsky.social][Bluesky]
-* Mastodon: [@keyboardkit@techhub.social][Mastodon]
-
 ## License
 
 KeyboardKit is available under the MIT license. See the [LICENSE][License] file for more info.
