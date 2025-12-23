@@ -7,13 +7,13 @@ much more.
 
 ## Installation
 
-KeyboardKit can be installed with the Swift Package Manager:
+OpenKeyboardKit can be installed with the Swift Package Manager:
 
 ```
-https://github.com/KeyboardKit/KeyboardKit.git
+https://github.com/valomedia/OpenKeyboardKit.git
 ```
 
-KeyboardKit must then be linked to all targets that will use it.  
+OpenKeyboardKit must then be linked to all targets that will use it.  
 
 ## Getting Started
 
