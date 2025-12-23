@@ -149,8 +149,8 @@ KeyboardKit provides a free, open-source keyboard engine. [KeyboardKit Pro][Pro]
 
 ## Documentation
 
-The [online documentation][Documentation] has a thorough getting-started guide, a detailed article for each feature,
-code samples, etc. You can also build it from the source code to get better formatting.
+The documentation has a thorough getting-started guide, a detailed article for each feature, code samples, etc. You can
+build it by selecting Product → Build Documentation in XCode or using the `docbuild` action of `xcodebuild(1)`.
 
 ## Demo App
 
