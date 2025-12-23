@@ -14,19 +14,19 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "KeyboardKit",
-            targets: ["KeyboardKit"]
+            name: "OpenKeyboardKit",
+            targets: ["OpenKeyboardKit"]
         )
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "KeyboardKit",
+            name: "OpenKeyboardKit",
             resources: [.process("Resources")]
         ),
         .testTarget(
-            name: "KeyboardKitTests",
-            dependencies: ["KeyboardKit"]
+            name: "OpenKeyboardKitTests",
+            dependencies: ["OpenKeyboardKit"]
         )
     ]
 )

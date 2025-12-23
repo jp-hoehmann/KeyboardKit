@@ -7,7 +7,7 @@
 //
 
 #if IS_KEYBOARDKIT
-import KeyboardKit
+import OpenKeyboardKit
 #else
 import KeyboardKitPro
 #endif
