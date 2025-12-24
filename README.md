@@ -176,17 +176,8 @@ fit for your needs – especially if you have some money to spare.
 
 KeyboardKit is available under the MIT license. See the [LICENSE][License] file for more info.
 
-[Email]: mailto:info@keyboardkit.com
-[Website]: https://keyboardkit.com
-[Bluesky]: https://bsky.app/profile/keyboardkit.bsky.social
-[Mastodon]: https://techhub.social/@keyboardkit
-[Sponsors]: https://github.com/sponsors/danielsaidi
 [About]: https://keyboardkit.com/about
-[Gumroad]: https://kankoda.gumroad.com
-[KeyboardKit-App]: https://keyboardkit.com/app
-[KeyboardKit]: https://github.com/KeyboardKit/KeyboardKit
 [Pro]: https://github.com/KeyboardKit/KeyboardKitPro
-[Documentation]: https://keyboardkit.github.io/KeyboardKit/
 [License]: https://github.com/KeyboardKit/KeyboardKit/blob/master/LICENSE
 [Getting-Started]: https://keyboardkit.github.io/KeyboardKit/documentation/keyboardkit/getting-started-article
 [Essentials]: https://keyboardkit.github.io/KeyboardKit/documentation/keyboardkit/essentials-article
