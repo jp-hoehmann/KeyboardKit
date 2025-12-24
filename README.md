@@ -1,9 +1,8 @@
 # KeyboardKit
 
 KeyboardKit lets you create amazing [custom keyboard extensions][About] with a few lines of code, using Swift &
-SwiftUI. KeyboardKit extends Apple's limited keyboard APIs with more capabilities. It can be extended with
-[KeyboardKit Pro][Pro], which unlocks localized keyboards, autocomplete, an emoji keyboard, AI support, themes, and
-much more.
+SwiftUI. KeyboardKit extends Apple's limited keyboard APIs with more capabilities. It is a fork of the last open 
+source version of [KeyboardKit](https://keyboardkit.com).
 
 ## Installation
 
@@ -165,9 +164,13 @@ The app has two keyboards - a `Keyboard` that uses KeyboardKit and a `KeyboardPr
 
 ## Support This Project
 
-KeyboardKit is open-source and completely free, but you can support the project by becoming a
-[GitHub Sponsor][Sponsors], upgrading to [KeyboardKit Pro][Pro] or [get in touch][Email] for freelance work, paid
-support, etc.
+OpenKeyboardKit is open-source and completely free. We don't want your money, but pull requests are always welcome.
+There is no support and no guarantee that the software works as intended. If you find a bug, you can file an issue, but
+we can't promise that it'll be fixed in a timely manner (or at all).
+
+The upstream project [KeyboardKit](https://keyboardkit.com) is still under active development, albeit as a 
+closed-source project with a proprietary license. If you need a more professional offering, it will be a much better
+fit for your needs – especially if you have some money to spare.
 
 ## License
 
