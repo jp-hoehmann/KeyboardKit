@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/danielsaidi/GestureButton.git",
       "state" : {
-        "revision" : "b1379a273a83a318bb43e47c9c50eaf4106a92df",
-        "version" : "0.4.1"
+        "revision" : "82d5a6acc8fd27aaabe1297a30060418be5cd450",
+        "version" : "0.5.0"
       }
     }
   ],

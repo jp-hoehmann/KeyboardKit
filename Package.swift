@@ -20,7 +20,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/danielsaidi/EmojiKit.git", exact: "1.7.1"),
-        .package(url: "https://github.com/danielsaidi/GestureButton.git", exact: "0.4.1")
+        .package(url: "https://github.com/danielsaidi/GestureButton.git", exact: "0.5.0")
     ],
     targets: [
         .target(
