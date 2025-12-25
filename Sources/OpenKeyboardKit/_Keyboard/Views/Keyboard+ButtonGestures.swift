@@ -27,7 +27,6 @@ public extension View {
     ///   - calloutContext: The callout context to affect, if any.
     ///   - isPressed: An optional binding that can be used to observe the button pressed state.
     ///   - isGestureAutoCancellable: Whether an aborted gesture will auto-cancel itself, by default `false`.
-    ///   - scrollState: The scroll state to use, if any.
     ///   - releaseOutsideTolerance: A custom percentage of the button size outside its bounds to count as a release, if any.
     func keyboardButtonGestures(
         for action: KeyboardAction,
@@ -36,7 +35,6 @@ public extension View {
         calloutContext: CalloutContext?,
         isPressed: Binding<Bool> = .constant(false),
         isGestureAutoCancellable: Bool? = nil,
-        scrollState: GestureButtonScrollState? = nil,
         releaseOutsideTolerance: Double = 1
     ) -> some View {
         self.keyboardButtonGestures(
@@ -45,7 +43,6 @@ public extension View {
             calloutContext: calloutContext,
             isPressed: isPressed,
             isGestureAutoCancellable: isGestureAutoCancellable,
-            scrollState: scrollState,
             releaseOutsideTolerance: releaseOutsideTolerance,
             doubleTapAction: { actionHandler.handle(.doubleTap, on: action) },
             longPressAction: { actionHandler.handle(.longPress, on: action) },
@@ -69,7 +66,6 @@ public extension View {
     ///   - calloutContext: The callout context to affect, if any.
     ///   - isPressed: An optional binding that can be used to observe the button pressed state, if any.
     ///   - isGestureAutoCancellable: Whether an aborted gesture will auto-cancel itself, by default `false`.
-    ///   - scrollState: The scroll state to use, if any.
     ///   - releaseOutsideTolerance: A custom percentage of the button size outside its bounds to count as a release, if any.
     ///   - doubleTapAction: The action to trigger when the button is double tapped, if any.
     ///   - longPressAction: The action to trigger when the button is long pressed, if any.
@@ -85,7 +81,6 @@ public extension View {
         calloutContext: CalloutContext? = nil,
         isPressed: Binding<Bool> = .constant(false),
         isGestureAutoCancellable: Bool? = nil,
-        scrollState: GestureButtonScrollState? = nil,
         releaseOutsideTolerance: Double? = nil,
         doubleTapAction: KeyboardGestureAction? = nil,
         longPressAction: KeyboardGestureAction? = nil,
@@ -103,7 +98,6 @@ public extension View {
             calloutContext: calloutContext,
             isPressed: isPressed,
             isGestureAutoCancellable: isGestureAutoCancellable,
-            scrollState: scrollState,
             releaseOutsideTolerance: releaseOutsideTolerance,
             doubleTapAction: doubleTapAction,
             longPressAction: longPressAction,
@@ -161,7 +155,6 @@ extension Keyboard {
         ///   - calloutContext: The callout context to affect, if any.
         ///   - isPressed: An optional binding that can be used to observe the button pressed state.
         ///   - isGestureAutoCancellable: Whether an aborted gesture will auto-cancel itself, by default `false`.
-        ///   - scrollState: The scroll state to use, if any.
         ///   - releaseOutsideTolerance: The percentage of the button size outside its bounds that should count as a release, by default `1.0`.
         ///   - doubleTapAction: The action to trigger when the button is double tapped.
         ///   - longPressAction: The action to trigger when the button is long pressed.
@@ -177,7 +170,6 @@ extension Keyboard {
             calloutContext: CalloutContext?,
             isPressed: Binding<Bool>,
             isGestureAutoCancellable: Bool? = nil,
-            scrollState: GestureButtonScrollState?,
             releaseOutsideTolerance: Double? = nil,
             doubleTapAction: KeyboardGestureAction?,
             longPressAction: KeyboardGestureAction?,
@@ -192,7 +184,6 @@ extension Keyboard {
             self.repeatTimer = repeatTimer
             self.calloutContext = calloutContext
             self.isPressed = isPressed
-            self.scrollState = scrollState
             self.releaseOutsideTolerance = releaseOutsideTolerance ?? 1.0
             self.cancelDelay = (isGestureAutoCancellable ?? false) ? 3 : nil
             self.doubleTapAction = doubleTapAction
@@ -209,7 +200,6 @@ extension Keyboard {
         private let repeatTimer: GestureButtonTimer?
         private let calloutContext: CalloutContext?
         private let isPressed: Binding<Bool>
-        private let scrollState: GestureButtonScrollState?
         private let releaseOutsideTolerance: Double
         private let cancelDelay: Double?
         private let doubleTapAction: KeyboardGestureAction?
@@ -251,7 +241,6 @@ extension Keyboard {
             GeometryReader { geo in
                 GestureButton(
                     isPressed: isPressed,
-                    scrollState: scrollState,
                     pressAction: { handlePress(in: geo) },
                     releaseInsideAction: { handleReleaseInside(in: geo) },
                     releaseOutsideAction: { handleReleaseOutside(in: geo) },

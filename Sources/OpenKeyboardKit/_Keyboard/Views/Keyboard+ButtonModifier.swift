@@ -50,7 +50,6 @@ public extension View {
         edgeInsets: EdgeInsets = .init(),
         isPressed: Binding<Bool> = .constant(false),
         isGestureAutoCancellable: Bool? = nil,
-        scrollState: GestureButtonScrollState? = nil,
         releaseOutsideTolerance: Double? = nil
     ) -> some View {
         return self
@@ -77,7 +76,6 @@ public extension View {
                 calloutContext: calloutContext,
                 isPressed: isPressed,
                 isGestureAutoCancellable: isGestureAutoCancellable,
-                scrollState: scrollState,
                 releaseOutsideTolerance: releaseOutsideTolerance ?? 1
             )
             .localeContextMenu(
