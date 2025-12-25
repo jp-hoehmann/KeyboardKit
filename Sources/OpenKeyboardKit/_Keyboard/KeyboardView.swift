@@ -6,6 +6,8 @@
 //  Copyright © 2020-2025 Daniel Saidi. All rights reserved.
 //
 
+import EmojiKit
+import GestureButton
 import SwiftUI
 
 /// This view can be used to mimic a native iOS keyboard.

@@ -6,6 +6,7 @@
 //  Copyright © 2018-2025 Daniel Saidi. All rights reserved.
 //
 
+import EmojiKit
 import Foundation
 
 public extension KeyboardAction {

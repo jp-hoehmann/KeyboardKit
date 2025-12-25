@@ -6,6 +6,7 @@
 //  Copyright © 2018-2025 Daniel Saidi. All rights reserved.
 //
 
+import EmojiKit
 import Foundation
 
 /// This enum defines keyboard-specific actions, and is also

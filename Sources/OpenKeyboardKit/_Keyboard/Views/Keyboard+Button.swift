@@ -6,6 +6,7 @@
 //  Copyright © 2020-2025 Daniel Saidi. All rights reserved.
 //
 
+import GestureButton
 import SwiftUI
 
 public extension Keyboard {

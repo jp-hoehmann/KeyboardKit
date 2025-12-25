@@ -6,6 +6,7 @@
 //  Copyright © 2021-2025 Daniel Saidi. All rights reserved.
 //
 
+import GestureButton
 import SwiftUI
 
 public extension View {

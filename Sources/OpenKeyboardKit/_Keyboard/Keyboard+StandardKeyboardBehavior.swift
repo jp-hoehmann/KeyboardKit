@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GestureButton
 
 public extension KeyboardBehavior where Self == Keyboard.StandardKeyboardBehavior {
 
@@ -92,15 +93,19 @@ extension Keyboard {
         
         /// An internal state to keep track of shift checks.
         public internal(set) var lastShiftCheck = Date()
-        
+
         /// An internal state to keep track of the last space tap.
         public internal(set) var lastSpaceTap = Date()
-        
-        
+
+        /// The start date for tracking repeat gesture duration.
+        public internal(set) var repeatGestureStartDate: Date?
+
+
         // MARK: - KeyboardBehavior
 
         open var backspaceRange: Keyboard.BackspaceRange {
-            let duration = repeatGestureTimer.duration ?? 0
+            guard let startDate = repeatGestureStartDate else { return .character }
+            let duration = Date().timeIntervalSince(startDate)
             return duration > 3 ? .word : .character
         }
 

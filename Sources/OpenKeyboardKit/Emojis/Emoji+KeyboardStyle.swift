@@ -6,7 +6,9 @@
 //  Copyright © 2021-2025 Daniel Saidi. All rights reserved.
 //
 
+import EmojiKit
 import SwiftUI
+
 public extension Emoji {
 
     /// This style can be used to modify the visual style of

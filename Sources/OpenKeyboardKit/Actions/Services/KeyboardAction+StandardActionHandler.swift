@@ -6,6 +6,7 @@
 //  Copyright © 2019-2025 Daniel Saidi. All rights reserved.
 //
 
+import EmojiKit
 import Foundation
 
 public extension KeyboardActionHandler where Self == KeyboardAction.StandardActionHandler {
@@ -222,6 +223,7 @@ extension KeyboardAction {
             let gestureAction = self.action(for: gesture, on: action)
             tryTriggerFeedback(for: gesture, on: action)
             tryUpdateSpaceDragState(for: gesture, on: action)
+            tryUpdateRepeatGestureStartDate(for: gesture, on: action)
             guard let gestureAction else { return }
             tryRemoveAutocompleteInsertedSpace(before: gesture, on: action)
             tryAutocompleteIgnoreCurrentWord(before: gesture, on: action)
@@ -623,6 +625,20 @@ extension KeyboardAction {
             if !shouldTriggerAudioFeedback(for: gesture, on: action) { return }
             guard let feedback = audioFeedback(for: gesture, on: action) else { return }
             triggerAudioFeedback(feedback)
+        }
+
+        /// Try to update the repeat gesture start date.
+        open func tryUpdateRepeatGestureStartDate(
+            for gesture: Keyboard.Gesture,
+            on action: KeyboardAction
+        ) {
+            guard action == .backspace else { return }
+            guard let standardBehavior = behavior as? Keyboard.StandardKeyboardBehavior else { return }
+            if gesture == .press {
+                standardBehavior.repeatGestureStartDate = Date()
+            } else if gesture == .release {
+                standardBehavior.repeatGestureStartDate = nil
+            }
         }
 
         /// Try to trigger haptic feedback for the action.
