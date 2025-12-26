@@ -7,6 +7,7 @@
 //
 
 #if os(iOS) || os(tvOS)
+import EmojiKit
 import OpenKeyboardKit
 import XCTest
 

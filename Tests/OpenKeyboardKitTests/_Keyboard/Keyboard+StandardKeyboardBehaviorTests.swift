@@ -8,6 +8,7 @@
 
 #if os(iOS) || os(tvOS)
 import CoreGraphics
+import GestureButton
 import XCTest
 
 @testable import OpenKeyboardKit
@@ -39,8 +40,7 @@ class Keyboard_StandardKeyboardBehaviorTests: XCTestCase {
 
     func testBackspaceRangeChangesTheLongerItIsPressed() {
         func result(after seconds: TimeInterval) -> Keyboard.BackspaceRange {
-            timer.start {}
-            timer.modifyStartDate(to: Date().addingTimeInterval(-seconds))
+            behavior.repeatGestureStartDate = Date().addingTimeInterval(-seconds)
             return behavior.backspaceRange
         }
         XCTAssertEqual(result(after: 0), .character)

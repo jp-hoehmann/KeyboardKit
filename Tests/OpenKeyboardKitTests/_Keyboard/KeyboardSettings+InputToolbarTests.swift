@@ -6,6 +6,7 @@
 //  Copyright © 2024-2025 Daniel Saidi. All rights reserved.
 //
 
+import EmojiKit
 import XCTest
 
 @testable import OpenKeyboardKit
